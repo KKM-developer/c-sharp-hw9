@@ -19,6 +19,17 @@ Console.WriteLine(PrintNumber(m, n));
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30
 */
+int MultiNumber (int m, int n)
+{
+   if (m == n) return n;
+   return m + MultiNumber(m+1, n);
+}
+Console.WriteLine("Задача 2");
+Console.Write("Введите начало отчета ");
+m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите конец ");
+n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(MultiNumber(m, n));
 /*
 Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
 m = 3, n = 2 -> A(m,n) = 29
